@@ -57,7 +57,7 @@ async function testJobCardExist(page) {
   const jobCardExist = await page.evaluate(() => {
     return Array.from(document.querySelectorAll('.job-card')).some(card => card.innerText.includes('Lead QA Automation Developer'));
   });
-  console.log(`Test 3: Lead QA Automation Developer job card exists: ${jobCardExists}`);
+  console.log(`Test 3: Lead QA Automation Developer job card exists: ${jobCardExist}`);
 
   if (jobCardExist) {
     console.log('Test 3 passed: "Lead QA Automation Developer" job card exists on the careers page.');
