@@ -27,3 +27,12 @@ This repository contains a Puppeteer test suite written in JavaScript to validat
    ```bash
    git clone https://github.com/jdaanovgit/rdbrck-tests.git
    cd rdbrck-tests
+
+2. **Run the following command:**
+   ```bash
+   node rdbrck_tests.js
+
+## Review Results:
+
+The test suite will run, and the results will be displayed in the terminal. 
+If there are any failures, detailed error messages will be provided as well.
