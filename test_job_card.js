@@ -5,7 +5,7 @@ const getOpenPositionTitles = require('./getOpenPositionTitles');
 (async () => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
-  await page.setViewport({ width: 1920, height: 1080 }); set full size window
+  await page.setViewport({ width: 1920, height: 1080 }); //set full size window
   const commonPage = new CommonPage(page);
   const careersPage = new CareersPage(page);
   
