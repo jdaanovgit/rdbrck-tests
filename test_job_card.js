@@ -5,13 +5,11 @@ const getOpenPositionTitles = require('./getOpenPositionTitles');
 (async () => {
   const browser = await puppeteer.launch({ headless: false });
   const page = await browser.newPage();
-  await page.setViewport({ width: 1920, height: 1080 }); //set full size window
-  const commonPage = new CommonPage(page);
-  const careersPage = new CareersPage(page);
-  
+  await page.setViewport({ width: 1920, height: 1080 }); // set full-size window
+
   try {
     await commonPage.navigateTo('https://www.rdbrck.com/careers');
-    
+
     // Use the getOpenPositionTitles method to get a list of open positions
     const openPositionTitles = await getOpenPositionTitles(page);
 
