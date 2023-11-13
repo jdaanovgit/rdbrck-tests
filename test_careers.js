@@ -3,7 +3,7 @@ const CommonPage = require('./pageObjects');
 
 class CareersPage extends CommonPage {
   async navigateToCareers() {
-    await this.page.click('button#careers'); // need to adjust selector as per the actual button ID or class
+    await this.page.click('li a[href*="careers"]'); // careers selector
   }
 }
 
