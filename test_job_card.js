@@ -8,7 +8,7 @@ const getOpenPositionTitles = require('./getOpenPositionTitles');
   await page.setViewport({ width: 1920, height: 1080 }); // set full-size window
 
   try {
-    await commonPage.navigateTo('https://www.rdbrck.com/careers');
+    await page.navigateTo('https://www.rdbrck.com/careers');
 
     // Use the getOpenPositionTitles method to get a list of open positions
     const openPositionTitles = await getOpenPositionTitles(page);
