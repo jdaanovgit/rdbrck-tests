@@ -1,30 +1,27 @@
 const puppeteer = require('puppeteer');
-const CommonPage = require('./pageObjects');
-
-class CareersPage extends CommonPage {
-  async jobCardExists() {
-    return await this.page.$eval('.job-card', (card) => card !== null); // need to adjust selector as per the actual job card class
-  }
-}
+const assert = require('assert');
+const getOpenPositionTitles = require('./getOpenPositionTitles');
 
 (async () => {
-  const browser = await puppeteer.launch({ headless: false });
+  const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.setViewport({ width: 1920, height: 1080 }); set full size window
   const commonPage = new CommonPage(page);
   const careersPage = new CareersPage(page);
-
+  
   try {
-    // Test 3: Validate that the "Lead QA Automation Developer" job card exists on the careers page.
     await commonPage.navigateTo('https://www.rdbrck.com/careers');
-    const jobCardExists = await careersPage.jobCardExists();
-    if (jobCardExists) {
-      console.log('Test 3 Passed: "Lead QA Automation Developer" job card exists');
-    } else {
-      console.error('Test 3 Failed: "Lead QA Automation Developer" job card not found');
-    }
+    
+    // Use the getOpenPositionTitles method to get a list of open positions
+    const openPositionTitles = await getOpenPositionTitles(page);
+
+    // Validation: Check if "Lead QA Automation Developer" is in the list of open positions
+    const positionToFind = 'Lead QA Automation Developer';
+    assert(openPositionTitles.includes(positionToFind), `${positionToFind} - does not appear in the list`);
+
+    console.log(`${positionToFind} - found in the list`);
   } catch (error) {
-    console.error('Error during test:', error);
+    console.error('Error:', error.message);
   } finally {
     await browser.close();
   }
