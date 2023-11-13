@@ -15,10 +15,13 @@ const getOpenPositionTitles = require('./getOpenPositionTitles');
     const openPositionTitles = await getOpenPositionTitles(page);
 
     // Validation: Check if "Lead QA Automation Developer" is in the list of open positions
-    const positionToFind = 'Senior Product Manager'; //Senior Product Manager - Lead QA Automation Developer
+    const positionToFind = 'Senior Product Manager';
     assert(openPositionTitles.includes(positionToFind), `${positionToFind} - does not appear in the list`);
 
     console.log(`${positionToFind} - found in the list`);
+
+    // If the position is found, mark the test as passed
+    console.log('Test Passed!');
   } catch (error) {
     console.error('Error:', error.message);
   } finally {
