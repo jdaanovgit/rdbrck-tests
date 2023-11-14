@@ -1,6 +1,6 @@
 const assert = require('assert');
 const getOpenPositionTitles = require('../getOpenPositionTitles');
-const setupBrowser = require('../setupBrowser');
+const { setupBrowser } = require('../setupBrowser');
 
 (async () => {
   let browser, page;
