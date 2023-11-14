@@ -33,7 +33,7 @@ This repository contains a Puppeteer test suite written in JavaScript to validat
    npm test test_navigate.js
 
 ## Run multiple tests
-1. Install mocha
+1. Install [mocha](https://mochajs.org/#getting-started)
    ```bash
    npm install mocha --save-dev
    
