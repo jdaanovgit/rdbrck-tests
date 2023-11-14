@@ -32,6 +32,24 @@ This repository contains a Puppeteer test suite written in JavaScript to validat
    ```bash
    npm test test_navigate.js
 
+## Run multiple tests
+1. Install mocha
+   ```bash
+   npm install mocha --save-dev
+   
+3. Update "package.json"
+   ```bash
+   "scripts": {
+   "test": "mocha 'tests/*.js'",
+   "test-navigation": "mocha 'tests/test_navigate.js'",
+   "test-careers": "mocha 'tests/test_careers.js'",
+   "test-jobcard": "mocha 'tests/test_job_card.js'"
+}
+   
+5. Run
+   ```bash
+   npm test
+
 ## Review Results:
 
 The test suite will run, and the results will be displayed in the terminal. 
