@@ -26,11 +26,11 @@ This repository contains a Puppeteer test suite written in JavaScript to validat
 1. **Clone the Repository:**
    ```bash
    git clone https://github.com/jdaanovgit/rdbrck-tests.git
-   cd rdbrck-tests
+   cd rdbrck-tests/tests
 
 2. **Run the following command:**
    ```bash
-   node rdbrck_tests.js
+   npm test test_navigate.js
 
 ## Review Results:
 
