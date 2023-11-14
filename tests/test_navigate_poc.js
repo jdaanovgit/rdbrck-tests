@@ -1,10 +1,13 @@
-const BaseTest = require('./baseTest'); 
+const BaseTest = require('./baseTest');
 const CommonPage = require('../pageObjects');
 
 const runTest = async () => {
+  let browser;
+
   try {
     // Setup browser and page
-    const { browser, page } = await BaseTest.setup();
+    const { browser: testBrowser, page } = await BaseTest.setup();
+    browser = testBrowser;
 
     // Test logic
     const commonPage = new CommonPage(page);
@@ -21,7 +24,9 @@ const runTest = async () => {
     console.error('Error during test:', error);
   } finally {
     // Close browser
-    await BaseTest.close({ browser });
+    if (browser) {
+      await BaseTest.close({ browser });
+    }
   }
 };
 
