@@ -1,4 +1,3 @@
-// careersPageLocators.js
 
 // Careers site menu button
 exports.CAREERS_BUTTON_HEADER = 'li a[href*="careers"]';
