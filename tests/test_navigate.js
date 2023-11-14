@@ -1,5 +1,5 @@
-const { setupBrowser } = require('./setupBrowser');
-const CommonPage = require('./pageObjects');
+const { setupBrowser } = require('../setupBrowser');
+const CommonPage = require('../pageObjects');
 
 (async () => {
   let browser, page;
