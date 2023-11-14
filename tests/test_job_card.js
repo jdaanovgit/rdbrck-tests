@@ -20,6 +20,9 @@ const setupBrowser = require('../setupBrowser');
 
     // If the position is found = test passed
     console.log('Test Passed!');
+
+    // Add a delay to observe the results before closing the browser
+    await new Promise(resolve => setTimeout(resolve, 5000)); // Adjust the delay time as needed
   } catch (error) {
     console.error('Error:', error.message);
   } finally {
