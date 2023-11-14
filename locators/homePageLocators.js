@@ -1,5 +1,5 @@
 
-// test - Careers site menu button
+// HomePage test - Careers site menu button
 const HOME_BUTTON = 'li a[href*="careers"]';
 
 module.exports = {
