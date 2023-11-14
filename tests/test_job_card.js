@@ -15,7 +15,7 @@ describe('Careers Page Tests', () => {
     await browser.close();
   });
 
-  it('should navigate to Careers page and find "Lead QA Automation Developer"', async () => {
+  it('test should navigate to Careers page and find "Lead QA Automation Developer"', async () => {
     try {
       // Navigate directly using the page object
       await page.goto('https://www.rdbrck.com/careers');
@@ -29,11 +29,11 @@ describe('Careers Page Tests', () => {
 
       console.log(`${positionToFind} - found in the list`);
 
-      // If the position is found, mark the test as passed
+      // If the position is found, mark the test as passed!
       console.log('Test Passed!');
     } catch (error) {
       console.error('Error:', error.message);
-      throw error; // Rethrow the error to ensure the test fails in case of an exception
+      throw error; // Ensure that test fails in case of an exception
     }
   });
 });
