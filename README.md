@@ -31,6 +31,8 @@ This repository contains a Puppeteer test suite written in JavaScript to validat
 2. **Run the following command:**
    ```bash
    npm test test_navigate.js
+   or
+   npx mocha test_job_card.js
 
 ## Run multiple tests
 1. Install [mocha](https://mochajs.org/#getting-started)
