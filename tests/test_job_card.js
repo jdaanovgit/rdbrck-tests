@@ -1,5 +1,5 @@
 const assert = require('assert');
-const getOpenPositionTitles = require('../getOpenOpenPositionTitles');
+const getOpenPositionTitles = require('../getOpenPositionTitles');
 const { setupBrowser } = require('../setupBrowser');
 
 (async () => {
