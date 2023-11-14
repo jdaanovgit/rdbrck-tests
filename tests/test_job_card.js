@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer');
 const assert = require('assert');
-const getOpenPositionTitles = require('./getOpenPositionTitles');
+const getOpenPositionTitles = require('../getOpenPositionTitles');
 
 (async () => {
   const browser = await puppeteer.launch({ headless: false });
