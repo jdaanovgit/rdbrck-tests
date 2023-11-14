@@ -16,7 +16,7 @@ This repository contains a Puppeteer test suite written in JavaScript to validat
    - The tests are designed to run on the Chrome browser. Make sure you have it installed on your machine.
 
 3. **Puppeteer:**
-   - Install Puppeteer using npm (Puppeteer is a Node.js library which provides a high-level API to control Chrome/Chromium over the DevTools Protocol):
+   - Install Puppeteer using npm ([Puppeteer](https://pptr.dev/) is a Node.js library which provides a high-level API to control Chrome/Chromium over the DevTools Protocol):
      ```bash
      npm install puppeteer
      ```
