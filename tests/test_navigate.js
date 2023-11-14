@@ -7,7 +7,7 @@ const CommonPage = require('../pageObjects');
   try {
     ({ browser, page } = await setupBrowser());
     const commonPage = new CommonPage(page);
-    // Test 1: Navigating to "https://rdbrck.com" will redirect to "https://www.rdbrck.com".
+    // Test 1: Navigating to "https://rdbrck.com" will redirect to (308) "https://www.rdbrck.com".
     await commonPage.navigateTo('https://rdbrck.com');
     const currentUrl = page.url();
     if (currentUrl === 'https://www.rdbrck.com/') { //can add another assert by home page text, to be sure that url doesn't includes some query params.
