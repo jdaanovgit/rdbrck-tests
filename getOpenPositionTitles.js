@@ -1,5 +1,5 @@
 const puppeteer = require('puppeteer');
-const { OPEN_POSITION_TITLES } = require('../locators/careersPageLocators');
+const { OPEN_POSITION_TITLES } = require('./locators/careersPageLocators');
 
 async function getOpenPositionTitles(page) {
   // Wait for the open positions to load
