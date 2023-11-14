@@ -1,5 +1,6 @@
 const puppeteer = require('puppeteer');
 const CommonPage = require('../pageObjects');
+const { CAREERS_BUTTON_HEADER } = require('../locators');
 
 class CareersPage extends CommonPage {
   async navigateToCareers() {
