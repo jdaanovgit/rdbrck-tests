@@ -2,8 +2,7 @@ const assert = require('assert');
 const getOpenPositionTitles = require('../getOpenPositionTitles');
 const setupBrowser = require('../setupBrowser');
 
-// Define the test function
-const runTest = async () => {
+(async () => {
   const { browser, page } = await setupBrowser();
 
   try {
@@ -26,7 +25,4 @@ const runTest = async () => {
   } finally {
     await browser.close();
   }
-};
-
-// Run the test
-runTest();
+})();
