@@ -43,8 +43,7 @@ This repository contains a Puppeteer test suite written in JavaScript to validat
    "test": "mocha 'tests/*.js'",
    "test-navigation": "mocha 'tests/test_navigate.js'",
    "test-careers": "mocha 'tests/test_careers.js'",
-   "test-jobcard": "mocha 'tests/test_job_card.js'"
-}
+   "test-jobcard": "mocha 'tests/test_job_card.js'"}
    
 5. Run
    ```bash
