@@ -1,5 +1,5 @@
 const puppeteer = require('puppeteer');
-const CommonPage = require('./pageObjects');
+const CommonPage = require('../pageObjects');
 
 class CareersPage extends CommonPage {
   async navigateToCareers() {
