@@ -4,7 +4,7 @@ const { CAREERS_BUTTON_HEADER } = require('../locators');
 
 class CareersPage extends CommonPage {
   async navigateToCareers() {
-    await this.page.click('li a[href*="careers"]'); // careers selector
+    await this.page.click(CAREERS_BUTTON_HEADER); // careers selector
   }
 }
 
