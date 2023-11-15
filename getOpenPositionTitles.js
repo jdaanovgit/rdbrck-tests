@@ -15,6 +15,8 @@ async function getOpenPositionTitles(page) {
 
 module.exports = getOpenPositionTitles;
 
+// Need to debug - Error during test: careersLocator is not defined:
+
 // const puppeteer = require('puppeteer');
 // const careersLocator = require('./locators/careersPageLocators');
 //
