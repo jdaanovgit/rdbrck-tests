@@ -6,7 +6,7 @@ console.log('careersLocator:', careersLocator);
 async function getOpenPositionTitles(page) {
   // Wait for the open positions to load
   await page.waitForSelector(careersLocator.OPEN_POSITION_TITLES);
-
+  console.log('Open positions:', careersLocator.OPEN_POSITION_TITLES);
   // Extract text content from open position elements
   const openPositionTitles = await page.evaluate(() => {
     const positionElements = document.querySelectorAll(careersLocator.OPEN_POSITION_TITLES);
