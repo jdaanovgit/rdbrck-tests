@@ -1,5 +1,5 @@
 const puppeteer = require('puppeteer');
-const careersLocator = require('./careersPageLocators');
+const careersLocator = require('./locators/careersPageLocators');
 
 console.log('careersLocator:', careersLocator);
 
